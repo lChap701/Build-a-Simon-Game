@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Atkinson Hyperlegible", sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+}
+
+h1,
+h2 {
+  text-shadow: 2px 2px 2px #000;
+}
+
+h1,
+#overlay h2 {
+  text-transform: uppercase;
+}
+
+p {
+  text-shadow: 1px 1px 1px #000;
+}
+
+#game {
+  padding: 5px;
+  text-align: center;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Affects all devices */
+#simon.no-input {
+  pointer-events: none;
+  touch-action: none;
+}
+
+#start {
+  margin-bottom: 2em;
+}
+
+.btn-container {
+  display: flex;
+  width: 225px;
+  margin: auto;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+#btns {
+  max-width: 500px;
+  max-height: 500px;
+  width: 50vw;
+  height: 50vw;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  margin: auto;
+}
+
+#btns .btn:nth-child(1) {
+  border-radius: 100% 0 0 0;
+}
+
+#btns .btn:nth-child(2) {
+  border-radius: 0 100% 0 0;
+}
+
+#btns .btn:nth-child(3) {
+  border-radius: 0 0 0 100%;
+}
+
+#btns .btn:nth-child(4) {
+  border-radius: 0 0 100% 0;
+}
+
+#overlay {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+}
